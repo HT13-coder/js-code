@@ -3,6 +3,7 @@ score=null
 score=undefined
 score=true
 score="harshit"
+score=""
 
 
 // console.log(typeof(score));
@@ -39,6 +40,38 @@ let booleanisLoggedIn = Boolean(isLoggedIn)
 let someNumber = 40
 
 let stringNumber = String(someNumber)
-console.log(stringNumber)
-console.log(typeof stringNumber)
+// console.log(stringNumber)
+// console.log(typeof stringNumber)
 
+
+//********************************************** Operations *********************************************
+
+let x=3;
+let negx= -x
+
+// console.log(negx)
+
+// console.log(2+2)
+// console.log(2-2)
+// console.log(2*3)
+// console.log(2/3)
+// console.log(2**4) //power
+// console.log(2%3)
+
+let str1= "Hello! "
+let str2= "Harshit"
+
+let str3= str1+str2
+//console.log(str3);
+
+// console.log("1"+2);
+// console.log(1+"2");
+
+// console.log(1+ 2+"2");
+// console.log("1"+2 +2);
+
+//console.log(3+4*5%3);
+
+console.log(true);
+console.log(+true);
+console.log(+"");
