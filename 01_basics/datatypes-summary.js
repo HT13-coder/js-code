@@ -41,12 +41,12 @@ const myFunction = function(){
     console.log("Hello! World");
 }
 
-console.log(typeof bigNumber)  
-console.log(typeof outsidetemp) // null => object 
-console.log(typeof scoreValue) // number
-console.log(typeof myFunction) // Function Object
-console.log(typeof myObj)// object
-console.log(typeof heros) // object
+// console.log(typeof bigNumber)  
+// console.log(typeof outsidetemp) // null => object 
+// console.log(typeof scoreValue) // number
+// console.log(typeof myFunction) // Function Object
+// console.log(typeof myObj)// object
+// console.log(typeof heros) // object
 
 
 
@@ -56,6 +56,40 @@ console.log(typeof heros) // object
 // null => object 
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3 
+
+
+
+// *************************************** Memory **************************************************
+
+// 2 types : Stack (Primitive) and Heap (Non-Primitive)
+
+let myName ="Harshit"
+
+let mySonName= myName
+mySonName= "novak djokovic"
+
+// console.log(myName);
+// console.log(mySonName);  // my son name will change as a copy is created in this case
+
+
+
+let userOne = {
+    email: "user@gmail.com",
+    upi: "user@ybl"
+}
+
+let userTwo =userOne
+
+userTwo.email="harshit@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email); // here both will be same as they point to same location in heap memory
+
+
+
+
+
+
 
 
 
