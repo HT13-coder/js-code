@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protein Shake Aur Code | DOM</title>
+</head>
+<body style="background-color: #313131; color: aliceblue;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(languageName){
+        const li = document.createElement('li')
+        li.innerText = `${languageName}`
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addLanguage("C++")
+    addLanguage("TypeScript")
+
+    function addLanguageOptimized(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector(".language").appendChild(li)
+
+    }
+    addLanguageOptimized("Golang")
+
+    // EDIT
+    const thirdLang = document.querySelector('li:nth-child(4)')
+    console.log(thirdLang)
+    // thirdLang.innerHTML = "MOJO"
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    thirdLang.replaceWith(newli) 
+
+    //EDIT javascript to java"
+    const firstlang = document.querySelector("li:first-child")
+    firstlang.outerHTML = "<li>Java</li>"
+
+    //REMOVE
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
+
+    
+
+
+
+</script>
+</html>
