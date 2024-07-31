@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #313131; color: aliceblue;">
+    <h2>Amazing Pictures</h2>
+    <div>
+        <ul id="images">
+            <li><img width="150px" id="photoshop" src="https://images.pexels.com/photos/3314294/pexels-photo-3314294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="photoshop"></li>
+            <li><img width="150px" id="japan" src="https://images.pexels.com/photos/3408353/pexels-photo-3408353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt=""></li>
+            <li><img width="150px" id="river" src="https://images.pexels.com/photos/1179225/pexels-photo-1179225.jpeg?auto=compress&cs=tinysrgb&w=800" alt=""></li>
+            <li><img width="150px" id="owl" src="https://images.pexels.com/photos/53977/eagle-owl-raptor-falconry-owl-53977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt=""></li>
+            <li><img width="150px" id="prayer" src="https://images.pexels.com/photos/325468/pexels-photo-325468.jpeg?auto=compress&cs=tinysrgb&w=800" alt=""></li>
+            <li><a style="color: beige;" href="https://google.com" id="google">Google</a></li>
+            
+    </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert('Owl clicked')      // good but not okay givves onclick but does not give features
+                                     // we use event listners            
+    // }
+
+    //attachEvent()
+    //jquery - on
+
+    //For interview
+    // type ,timestamp ,defaultPrevented
+    // target ,toElement ,srcElement ,currentTarget
+    // clientX, clientY , screenX , screenY 
+    // altKey , ctrlKey , shiftKey , keyCode
+
+    // document.getElementById('owl').addEventListener('click' , function(e){
+    //     // alert('Owl clicked again')
+    //     console.log(e);
+    // } , false)
+
+    // // diff between eventPropagation false and true  - event bubbling (bottom to top execute)(default,false) and event capturing (top to bottom)(true )
+    // document.getElementById('images').addEventListener('click' , function(e){
+    //     console.log("Clicked inside the ul");
+    // } , false)
+
+    // document.getElementById('owl').addEventListener('click' , function(e){ 
+    //     // alert('Owl clicked again')
+    //     console.log("owl clicked");
+    //     e.stopPropagation()  //to stop it from bubbling and to prevent it to go up
+    // } , false)
+
+    // document.getElementById('google').addEventListener('click' , function(e){ 
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log('Google clicked');
+    // } , false)
+
+
+    // TO VANISH ALL IMAGES ON CLICKING
+    document.querySelector('#images').addEventListener('click',function(e){
+        // console.log(e.target.parentNode)
+        // const removeIt = e.target.parentNode
+        // removeIt.remove()
+        // // removeIt.parentNode.removeChild(removeIt)
+
+        console.log(e.target.tagName)
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id)
+            const removeIt =  e.target.parentNode
+            removeIt.remove()
+        }
+        
+    },false)
+
+
+    /*  Watch vedio at 4hrs 2 mins 
+        Javascript
+            Synchronous
+            Single Threaded         Default Javascript
+    */
+
+    
+</script>
+</html> 
