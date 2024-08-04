@@ -63,3 +63,17 @@ const User2 = {
 
 const tea = Object.create(User2)
 console.log(tea.email);
+
+
+////////////////  Closure  ///////////////////
+
+function makeFunc() {
+    const name = "Mozilla";
+    function displayName(){
+        console.log(name);
+    }
+    return displayName;
+}
+
+const myFunc = makeFunc(); //here this returns full lexical scope of makeFunc
+myFunc();
